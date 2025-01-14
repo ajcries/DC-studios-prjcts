@@ -1,0 +1,89 @@
+/* General styling for full-screen video background */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Bangers', sans-serif;
+    color: white;
+}
+
+/* Full-screen video container */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+#play-video {
+    background-color: #ff0000; /* Superman red */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#play-video:hover {
+    background-color: #cc0000; /* Darker red */
+}
+
+/* Container holding all countdowns */
+.countdown-container {
+    display: flex;
+    justify-content: center; /* Center the countdowns horizontally */
+    gap: 60px; /* Add spacing between countdowns */
+    margin-top: 25vh; /* Add spacing from the top */
+    z-index: 10; /* Ensure countdowns are above the video */
+}
+
+/* Individual location countdowns */
+.countdown-location {
+    text-align: center; /* Center-align text */
+}
+
+/* Style for the location name */
+.location-name {
+    font-size: 24px;
+    color: yellow; /* Superman's yellow color */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Neon effect for countdown numbers */
+.neon-text {
+    font-size: 72px;
+    font-weight: bold;
+    color: #d30707; /* Neon red for countdown numbers */
+    text-shadow: 
+        0 0 10px #003cff,
+        0 0 20px #0026ff,
+        0 0 30px #0004ff,
+        0 0 40px #ff5500,
+        0 0 70px #ff5500,
+        0 0 80px #ff5500,
+        0 0 100px #ff5500,
+        0 0 150px #ff5500;
+    animation: neon-grow 1s infinite alternate;
+}
+
+
+/* Import the Google Font for a comic-book style */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
